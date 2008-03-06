@@ -1,12 +1,17 @@
-# -*- coding: iso-8859-1 -*-
+# -*- coding: ISO-8859-1 -*-
 
-#Autor: Roberto Vito Rodrigues Filho
-#Data: 28/02/2008
-#Descrição: Classe FiltroCH é a classe que implementa o filtro, nada mais é 
-#           que um bean
-
+"""
+Autor: Roberto Vito Rodrigues Filho
+Data: 28/02/2008
+Descrição: Classe FiltroCH é a classe que implementa o filtro, nada mais é
+que um bean.
+"""
+         
 class FiltroCH(object):
+	""" Esta classe classe implementa o filtro do Gerenciador de Chamadas. """
+
 	def __init__(self):
+		""" Este método inicializa os atributos da classe. """
 		self.__adicionar = False
 		self.__editar = False
 		self.__consultar = False
