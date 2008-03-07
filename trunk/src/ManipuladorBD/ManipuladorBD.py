@@ -1,4 +1,11 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: iso-8859-1 -*-
+
+__version__="0.2"
+
+"""
+Autor: Taciano Messias Moraes
+Data: 05/03/2008
+"""
 
 class ManipuladorBD:
     """
@@ -6,45 +13,53 @@ class ManipuladorBD:
     controlar todas as funções do Manipulador do Banco de Dados.
     """
     
-    bdMP = ""         # Instância da classe BDMP
-    bdCliente = ""    # Instância da classe BDCliente
-    bdChamada = ""    # Instância da classe BDChamada
-    bdOS = ""         # Instância da classe BDOS
-    bdUsuario = ""    # Instância da classe BDUsuario
 
     @returnType(string)
     @parameterTypes(selfType, Consulta)
     def consultaBD(self, __consulta):
         """ Método que realizará a função Consultar. """
         
-        resultadoConsulta = ""
-        
-        return resultadoConsulta
+        switch = {
+            'cl': consultaCL,
+            'ch': consultaCH,
+            'os': consultaOS,
+            'us': consultaUS,
+            'mp': consultaMP}[consulta.getModoConsulta()](consulta)
+        return switch
     
     @returnType(boolean)
     @parameterTypes(selfType, Consulta)
     def adicionaBD(self, __consulta):
         """ Método que realizará a função Adicionar. """
         
-        resultadoConsulta = False
-        
-        return resultadoConsulta
+        switch = {
+            'cl': adicionaCL,
+            'ch': adicionaCH,
+            'os': adicionaOS,
+            'us': adicionaUS}[consulta.getModoConsulta()](consulta)
+        return switch
     
     @returnType(boolean)
     @parameterTypes(selfType, Consulta)
     def editaBD(self, __consulta):
         """ Método que realizará a função Editar. """
         
-        resultadoConsulta = False
-        
-        return resultadoConsulta
+        switch = {
+            'cl': editaCL,
+            'ch': editaCH,
+            'us': editaUS}[consulta.getModoConsulta()](consulta)
+        return switch
     
     @returnType(boolean)
     @parameterTypes(selfType, Consulta)
     def removeBD(self, __consulta):
         """ Método que realizará a função Remover. """
         
-        resultadoConsulta = False
-        
-        return resultadoConsulta
+        switch = {
+            'cl': removeCL,
+            'ch': removeCH,
+            'os': removeOS,
+            'us': removeUS}[consulta.getModoConsulta()](consulta)
+        return switch
+
     
