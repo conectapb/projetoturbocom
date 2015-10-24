@@ -1,0 +1,3 @@
+Através deste projeto, nosso grupo pretende desenvolver para uma empresa provedora de internet sem fio, um Sistema de Gerenciamento que administre Clientes, Chamadas Telefônicas e Ordens de Serviço, de forma a tornar o cadastramento, edição, consulta e remoção destes o mais prático e ágil possível, inter-conectando estes através de forma segura a um banco de dados bem estruturado e íntegro.
+
+Neste projeto, utilizaremos a linguagem de programação Python, o banco de dados MySQL, o construtor de interfaces Glade e a linguagem de estruturação e design UML, além de se basear em princípios da Engenharia de Software para garantir um software de qualidade e segurança.
